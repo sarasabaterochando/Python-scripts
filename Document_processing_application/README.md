@@ -1,4 +1,4 @@
-# Document Processing Application (Streamlit)
+# 📄 Document Processing Application (Streamlit)
 
 This project is a Streamlit application that automates the generation of DOCX and PDF documents from an Excel file using predefined templates. It is designed as a practical example of document automation, error handling, and a simple web UI for non-technical users.
 
