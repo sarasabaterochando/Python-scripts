@@ -1,52 +1,48 @@
-# Data Pipeline Automation
+# API Data Exporter 📤
 
-This Python script automates the process of fetching data from multiple API endpoints, converting the responses into CSV files, and handling errors by sending email notifications.  
+**API Data Exporter** is a Python automation script that retrieves data from multiple REST APIs, processes the responses, and exports them into CSV files.  
+The script includes robust error handling and email notifications for production-ready monitoring.
 
-## 📦 Features
+---
 
-- Connects to 3 API endpoints:
-  - Machine production history
-  - Machine alarms
-  - Error logs
-- Converts JSON responses into clean CSV files.
-- Sends automatic email alerts in case of API or data issues.
+## 🧩 What This Project Demonstrates
 
-## ⚙️ Environment Setup
+- Integration with **REST APIs**
+- Data processing using **Pandas**
+- Automated **CSV generation**
+- Centralized configuration management
+- Error handling with **email alerts**
+- Clean, maintainable Python code
 
-Create a secure method to keep the following variables:
-```
-path = "path/to/output/folder/"
-API_URL = "https://example.com/api/"
-MAIL_HOST = "smtp.yourprovider.com"
-MAIL_ADDRESS = "youremail@example.com"
-MAIL_PASSWORD = "your_password"
-```
+---
 
-### 🔐 Security Notes
+## ⚙️ Core Functionality
 
--   Avoid storing passwords in the script\
--   Prefer environment variables or `.env` files\
--   Use SSH key-based authentication whenever possible
+- Fetches data from multiple API endpoints
+- Converts JSON responses into structured CSV files
+- Validates empty or failed API responses
+- Sends email notifications when errors occur
 
-Install dependencies: 
+---
 
-`pip install pandas requests`
+## 🛠️ Tech Stack
+
+- **Python 3**
+- **Pandas**
+- **Requests**
+- **SMTP (smtplib)**
+- CLI-based execution
+
+---
+
+## 🎓 Project Context
+
+This project was originally developed for a real production environment; all variables and sensitive details have been anonymized for portfolio purposes.
+
+---
+
+## 👤 Author
+
+Developed by *sarasabaterochando*  
 
 
-## 🚀 Usage
-
-Run the script manually or schedule it:
-
-python api_connection.py
-
-
-The script will:
-1. Fetch API data.
-2. Save it into CSV files in the specified path.
-3. Send an email if something goes wrong (no data or connection errors).
-
-## 🧠 Notes
-
-- The script disables SSL verification (`verify=False`) for convenience — enable it in production for security.
-- Do **not** commit your real credentials or company URLs to public repositories.
-- Replace the API endpoints and email configuration with generic/demo data before publishing.
